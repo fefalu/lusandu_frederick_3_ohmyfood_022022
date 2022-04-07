@@ -1,0 +1,247 @@
+// IMG BACKGROUND PIC
+img.rest-BkgdPic {
+    @include picDimHead;
+}
+
+// HOME BTN REST 1
+.homeBtnRest {
+    position: absolute;
+    font-size: 16px;
+    color: $prin-txt-color;
+    z-index: 1;
+    padding: 13px;
+}
+
+// 
+section.rest-bloc {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin-top: -40px;
+    padding-bottom: 3rem;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: $bkgd-color;
+}
+
+// BLOC REST TITLE
+.blocRest-title {
+    display: flex;
+    position: relative;
+    &__icon {
+        @include heartIcon;
+        &:hover i.fa-regular.fa-heart {
+            visibility: hidden;
+            cursor: pointer;
+        }
+        &:hover i.fa-solid.fa-heart {
+            visibility: visible;
+            cursor: pointer;
+        }
+      }
+}
+
+// 
+i.fa-regular.fa-heart {
+    display: flex;
+    position: absolute;
+    right: 0;
+    margin: 1rem;
+    font-size: 20px;
+}
+i.fa-solid.fa-heart {
+    display: flex;
+    position: absolute;
+    right: 0;
+    float: right;
+    margin: 1rem;
+    font-size: 20px;
+    color: transparent;
+    visibility: hidden;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-transition: transform 1000ms ease-in-out;
+            transition: transform 1000ms ease-in-out;
+    background-image: linear-gradient(to right, #9356DC 0%, #9356DC 50%, #FF79DA 100%);
+}
+// 
+h3.rest-title {
+    @include restTitle;
+    font-family: 'Shrikhand', cursive;
+}
+
+// REST 3 BLOC TYPE
+.rest-blocType {
+   @include restAlgn;
+  /* @include restAlign-dim;*/
+}
+
+// CHOICE REST 1
+p.choice-rest {
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-left: 10px;
+    &::after {
+        display: block;
+        height: 2px;
+        content: "";
+        width: 36px;
+        background-color: $tertiary-color;
+    }   
+}
+
+// BLOC REST 1
+.blocRest {
+    @include figRest-item;
+    -webkit-box-shadow: 0px 4px 11px -3px rgba(38,38,38,0.20);
+            box-shadow: 0px 4px 11px -3px rgba(38,38,38,0.20);
+    background-color: $quarternary-color;
+    overflow: hidden;
+    // transition: all 5s ease-in-out, background-color;
+    &:hover {
+        -webkit-box-shadow: 0px 4px 11px -3px rgba(38,38,38,0.60);
+                box-shadow: 0px 4px 11px -3px rgba(38,38,38,0.60);
+    }
+    // text-overflow: ellipsis
+    &:hover .blocRest__menu {
+        width: 100%-35%;
+    }
+    &:hover .blocRest__menu--ingr {
+        width: 100%-35%;
+    }
+
+    &:hover .checkIcon {
+        visibility: visible;
+        -webkit-transform: translateX(-50px);
+                transform: translateX(-50px);
+    }
+    &:hover .blocRest-info__px {
+        transform: translateX(-50px)
+    }
+    &:hover i.fa-solid.fa-circle-check {
+        transform: rotate(360deg);
+    }
+
+    &__menu {
+        @include figRest-menu;
+        &--ingr {
+            @include figRest-menuIngr;
+        }
+    }
+}
+
+// 
+@keyframes blocRest {
+    from {transform: translateY(20px);}
+    to {transform: translate(0);
+        opacity: 1;
+    }
+}
+  p.choice-rest {
+   opacity: 0.02;
+   -webkit-animation: blocRest 1s ease-in-out 1000s forwards;
+            animation: blocRest 1s ease-in-out 1000ms forwards;
+}
+ 
+ .blocRest:nth-child(1) {
+    opacity: 0.02;
+    -webkit-animation: blocRest 1s ease-in-out 1000s forwards;
+            animation: blocRest 1s ease-in-out 1000ms forwards;
+  }
+  .blocRest:nth-child(2) {
+    opacity: 0.02;
+    -webkit-animation: blocRest 1.30s ease-in-out 1000s forwards;
+            animation: blocRest 1.30s ease-in-out 1000ms forwards;
+  }
+  .blocRest:nth-child(3) {
+    opacity: 0.02;
+    -webkit-animation: blocRest 2s ease-in-out 1000s forwards;
+            animation: blocRest 2s ease-in-out 1000ms forwards;
+  }
+  .blocRest:nth-child(4) {
+    opacity: 0.02;
+    -webkit-animation: blocRest 2.30s ease-in-out 1000s forwards;
+            animation: blocRest 2.30s ease-in-out 1000ms forwards;
+  }
+  .blocRest:nth-child(5) {
+    opacity: 0.02;
+    -webkit-animation: blocRest 3s ease-in-out 1000s forwards;
+            animation: blocRest 3s ease-in-out 1000ms forwards;
+  }
+  .blocRest:nth-child(6) {
+    opacity: 0.02;
+    -webkit-animation: blocRest 3.30s ease-in-out 1000s forwards;
+            animation: blocRest 3.30s ease-in-out 1000ms forwards;
+  }
+  .blocRest:nth-child(7) {
+    opacity: 0.02;
+    -webkit-animation: blocRest 4s ease-in-out 1000s forwards;
+            animation: blocRest 4s ease-in-out 1000ms forwards;
+  }
+  .blocRest:nth-child(8) {
+    opacity: 0.02;
+    -webkit-animation: blocRest 4.30s ease-in-out 1000s forwards;
+            animation: blocRest 4.30s ease-in-out 1000ms forwards;
+  }
+  .blocRest:nth-child(9) {
+    opacity: 0.02;
+    -webkit-animation: blocRest 5s ease-in-out 1000s forwards;
+            animation: blocRest 5s ease-in-out 1000ms forwards;
+  }
+  .blocRest:nth-child(10) {
+    opacity: 0.02;
+    -webkit-animation: blocRest 5.30s ease-in-out 1000s forwards;
+            animation: blocRest 5.30s ease-in-out 1000ms forwards;
+  }
+// 
+.blocRest-info {
+    @include figCapRest-info;
+    &__px {
+        @include blocRestInfo-Px;
+        margin-top: 38px;
+        transition: transform 450ms ease;
+    }
+}
+
+// 
+i.fa-solid.fa-circle-check {
+    color: $quarternary-color;
+    transition: transform 450ms ease-in-out;
+}
+
+.checkIcon {
+    @include figCapRest-infoIcon; 
+    display: flex;
+    position: relative;
+    visibility: hidden;
+    color: $quarternary-color;
+    background-color: $tertiary-color;
+    // visibility: hidden;
+    transition: transform 400ms ease-out;
+    right: -50px;
+}
+
+// BLOC REST 2
+
+
+// BTN COM
+.btnCom {
+    @include btnCom;
+    border: 4ps solid $primary-color;
+    background: linear-gradient(to bottom, $primary-color 0%, $secondary-color 0%, #9356DC 100%);
+    -webkit-box-shadow: 0px 4px 11px -3px rgba(26,26,26,0.74);
+            box-shadow: 0px 4px 11px -3px rgba(26,26,26,0.74);
+    transition: transform 1000ms ease-in-out; background-color: 1000ms;
+    &:hover {
+        -webkit-transform: scale(1.05);
+                transform: scale(1.05);
+        -webkit-shadow: 0px 4px 18px -3px $ftr-color;
+                box-shadow: 0px 4px 18px -3px $ftr-color;
+    }
+}
+
+.btnComAct {
+    font-size: 1rem;
+    color: $quarternary-color;
+}

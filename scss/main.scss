@@ -1,0 +1,130 @@
+@import './config';
+@import './reset';
+@import './sub-pages';
+@import './menu';
+@import './responsive';
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  // MAIN
+  main {
+    height: 100%;
+    width: 100%;
+}
+
+  // HEADER
+header {
+    width: 100%;
+    background-color: $bkgd-color;
+  }
+
+  // LOADER
+.loader {
+  width: 100px;
+  height: 60px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // background: #fff;
+  z-index: 1;
+}
+.field-wrap {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  white-space: normal;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  animation: spin  2000ms cubic-bezier(.185, .885, .32, 1.275);
+  transform-origin: 50% 100%;
+  opacity: 0;
+}
+.field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 100%;
+  border: 4px solid transparent;
+}
+@keyframes spin {
+  0%, 15% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+  90% {
+    opacity: 0.75;
+    transition: opacity 0.4s;
+  }
+  
+}
+.field-wrap:nth-child(1) .field {
+  border-color: #e10000;
+  width: 90px;
+  height: 90px;
+  top: 7px;
+}
+.field-wrap:nth-child(2) .field {
+  border-color: #fff600;
+  width: 76px;
+  height: 76px;
+  top: 14pc;
+}
+.field-wrap:nth-child(3) .field {
+  border-color: #476930;
+  width: 62px;
+  height: 62px;
+  top: 21px;
+}
+.field-wrap:nth-child(4) .field {
+  border-color: #00FFFF;
+  width: 48px;
+  height: 48px;
+  top: 28px;
+}
+.field-wrap:nth-child(5) .field {
+  border-color: #151A7B;
+  width: 34px;
+  height: 34px;
+  top: 35px;
+}
+.field-wrap:nth-child(6) .field {
+  border-color: #9614d0;
+  width: 20px;
+  height: 20px;
+  top: 42px;
+}
+
+.field-wrap:nth-child(1) {
+  animation-delay: -50ms;
+}
+.field-wrap:nth-child(2) {
+  animation-delay: -100ms;
+}
+.field-wrap:nth-child(3) {
+  animation-delay: -150ms;
+}
+.field-wrap:nth-child(4) {
+  animation-delay: -200ms;
+}
+.field-wrap:nth-child(5) {
+  animation-delay: -250ms;
+}
+.field-wrap:nth-child(6) {
+  animation-delay: -300ms;
+}
+
+//  FOOTER
+footer {
+    position: relative;
+    background-color: $ftr-color;
+  }
